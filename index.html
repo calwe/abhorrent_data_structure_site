@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Records</title>
+        <style type="text/css" media="screen">
+            body {
+                background-color: pink;
+                font-family: "Arial", sans-serif;
+                font-size: 20px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            h1, h2 {
+                color: darkblue;
+            }
+
+            pre {
+                padding: 10px;
+                background-color: #F7A9D6;
+                border: 3px solid #eeeeee;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Records</h1>
+        <p>Records are a way of storing multiple labelled data types in a group. They are statically sized, but can be mutated.</p>
+        <h2>Psuedocode</h2>
+        <p>They can be defined in OCR pseudocode like so</p>
+<pre><code>record student
+    id : Integer
+    name : String
+    grade : String
+endrecord</code></pre>
+        <p>The fields can also be read/written to</p>
+<pre><code>student1 : student
+student1.id = 1
+student1.name = "Dave Grohl"
+student1.grade = "A*"
+
+print("Student Name: " + student1.name)
+</code></pre>
+        <h2>Java</h2>
+        <p>In Java, a record is called a class - and can have methods</p>
+        <p>We can just create a class with no methods to replicate pseudocode records</p>
+<pre><code>public class Student {
+    public int id;
+    public String name;
+    public String grade;
+}</code></pre>
+        <p>We can then create and access our class in our main method.</p>
+<pre><code>public class App {
+    public static void main(String[] args) {
+        Student student = new Student();
+        Student.id = 1;
+        Student.name = "Dave Grohl";
+        Student.grade = "A*";
+
+        System.out.println("Student name: " + student.name)
+    }
+}</code></pre>
+    </body>
+</html>
